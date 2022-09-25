@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/prof.css'%}">
 </head>
 
 <body>
@@ -57,19 +58,50 @@
                 <a href="courses.html" class="nav-item nav-link">Courses</a>
 
                 {% if user.is_authenticated %}
-                <li>hello {{user.username}}</li>
-                 <a href="logout" class="nav-item nav-link">logout</a>
+               <!-- <li class="nav-item nav-link">hello {{user.username}}</li>-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+
+    <ul class="nav navbar-nav navbar-right" >
+        <style>
+
+            </style><center>
+                <div class="container1">
+            <a   href="#">{{a.f_name}} > </a>
+
+            <ul>
+                    <li><a class="booking" href="/user1/">home</a></li>
+                    <li><hr></li>
+                    <li><a class="booking" href="/profile/">Profile</a></li>
+                    <li><hr></li>
+                    <li><a class="booking" href="#">Orders</a></li>
+                    <li><hr></li>
+                    <li><a class="booking" href="/e_profile/{{a.uid}}/">Edit Profile</a></li>
+                    <li><hr></li>
+                    <li><a class="booking" href="/cpass/">Change Password</a></li>
+                    <li><hr></li>
+                   <!-- <li><a class="booking" href="/logout/">Logout</a></li>-->
+                <a href="logout" class="nav-item nav-link">logout</a>
+                </center>
+                </ul>
+            </div>
+
+
+    </ul>
+</div>
+
                 {% else %}
 
-                 <a href="register" class="nav-item nav-link">register</a>
-                <a href="login" class="nav-item nav-link">login</a>
+                <!-- <a href="register" class="nav-item nav-link">register</a>-->
+            <a href="login" class="nav-item nav-link">login</a>
+            <a href="register" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+
 
                 {% endif %}
 
 
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+               <!-- <a href="contact.html" class="nav-item nav-link">Contact</a>-->
             </div>
-<!--            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>-->
+           <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>-->
         </div>
     </nav>
     <!-- Navbar End -->
@@ -102,7 +134,7 @@
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
+                                <p class="fs-5 text-white mb-4 pb-2"></p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                             </div>
@@ -124,7 +156,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
                             <h5 class="mb-3">Skilled Instructors</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -133,7 +165,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-globe text-primary mb-4"></i>
                             <h5 class="mb-3">Online Classes</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -142,7 +174,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-home text-primary mb-4"></i>
                             <h5 class="mb-3">Home Projects</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -151,7 +183,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
                             <h5 class="mb-3">Book Library</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -174,8 +206,8 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
                     <h1 class="mb-4">Welcome to MINCC</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <p class="mb-4"></p>
+                    <p class="mb-4"></p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
@@ -270,11 +302,11 @@
                 <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
                 <h1 class="mb-5">Popular Courses</h1>
             </div>
-            <div class="row g-4 justify-content-center">
+           <!-- <div class="row g-4 justify-content-center">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="{% static 'img/course-1.jpg' %}" alt="">
+                            <img class="img-fluid" src="{% static 'img/course-1.jpg ' %}" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
@@ -355,7 +387,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 <!--    # Courses End-->
@@ -367,7 +399,7 @@
                 <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
                 <h1 class="mb-5">Expert Instructors</h1>
             </div>
-            <div class="row g-4">
+           <!-- <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
@@ -439,7 +471,7 @@
                             <small>Designation</small>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
@@ -453,7 +485,7 @@
                 <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
                 <h1 class="mb-5">Our Students Say!</h1>
             </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
+           <!-- <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
                     <img class="{% static 'border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-1.jpg' %}" style="width: 80px; height: 80px;">
                     <h5 class="mb-0">Client Name</h5>
@@ -485,14 +517,14 @@
                     <div class="testimonial-text bg-light text-center p-4">
                     <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
     <!-- Testimonial End -->
         
 
-    <!-- Footer Start -->
+   <!-- &lt;!&ndash; Footer Start &ndash;&gt;
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -555,7 +587,7 @@
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
 
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        &lt;!&ndash;/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/&ndash;&gt;
                         Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
                         Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
                     </div>
@@ -570,7 +602,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Footer End -->
 
 

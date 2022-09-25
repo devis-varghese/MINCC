@@ -70,6 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'MINCC.wsgi.application'
+AUTH_USER_MODEL='credentials.Account'
 
 
 # Database
@@ -77,10 +78,12 @@ WSGI_APPLICATION = 'MINCC.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'minccdb',
-        'USER': 'root',
-        'PASSWORD':'',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'store',
+        # 'USER': 'root',
+        # 'PASSWORD': '',
     }
 }
 
@@ -122,8 +125,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS=[os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT=os.path.join(BASE_DIR,'assets')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

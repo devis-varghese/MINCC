@@ -1,146 +1,60 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
 </head>
 <body>
-<h2>Registration</h2>
-<!--<form action="register" method="post">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="UserName">
-    <input type="text" name="first_name" placeholder="enter your first name">
-    <input type="text" name="last_name" placeholder="enter your last name">
-    <input type="text" name="email" placeholder="enter your email">
-    <input type="text" name="password" placeholder="enter your password">
-    <input type="text" name="password1" placeholder="confirm your password">
-    <input type="submit">
-</form>-->
- <form  action="/register/"  >
-        {% csrf_token %}
 
+    <div class="main">
 
+        <div class="container">
+            <form method="POST" action="register" class="appointment-form" id="appointment-form">
+                {% csrf_token %}
+                <h2>Register and apply for a courses</h2>
+                <div class="form-group-1">
 
+                    <input type="text" name="fname" id="name" placeholder="Your First Name" required />
+                     <input type="text" name="lname" id="name" placeholder="Your Last Name" required />
+                     <input type="text" name="address" id="title" placeholder="Address" required />
+                    <input type="text" name="dob" id="title" placeholder="DOB" required />
 
-            <div >
-              <input type="text"  placeholder="UserName" name="username" />
+                    <input type="text" name="phone" id="phone_number" placeholder="Phone number" required />
 
-            </div>
+                     <!--<input type="image" name="image" id="title" placeholder="image" required />-->
+                    <input type="text" name="email" id="email" placeholder="Email" required />
+                     <input type="text" name="password" id="title" placeholder="enter a password" required />
+                     <input type="text" name="password1" id="title" placeholder="confirm your password" required />
+                   <!-- <div class="select-list">
+                        <select name="course_type" id="course_type">
+                            <option selected value="">Course Type</option>
+                            <option value="society">Society</option>
+                            <option value="language">Language</option>
+                        </select>
+                    </div>-->
+                </div>
 
+                </div>
 
-
-            <div>
-              <input type="text"  placeholder="Enter your First Name" name="first_name" />
-
-            </div>
-
-            <div>
-              <input type="text"  placeholder="Enter your Last Name" name="last_name" />
-
-            </div>
-
-
-            <div>
-              <input type="email"  placeholder="Enter your E-Mail" name="email" />
-
-            </div>
-
-
-
-
-            <div>
-              <input type="password"  placeholder="Password" name="password" />
-
-            </div>
-
-            <div>
-              <input type="password" placeholder="Password" name="password1" />
-
-            </div>
-
-   <input type="submit">
-
-         <!-- <div class="col-sm">
-            <div class="wrap-input100 validate-input m-b-16" data-validate="Хаягаа хийнэ үү?">
-              <input type="text" class="input100" placeholder="Address" name="address" />
-              <span class="focus-input100"></span>
-              <span class="symbol-input100">
-                <span class="lnr lnr-home"></span>
-              </span>
-            </div>
-
-            <div class="wrap-input100 m-b-16">
-              <select class="input100" name="course">
-                {% for course in courses %}
-                <option value="{{ course.id }}">{{ course.course_name }}</option>
-                {% endfor %}
-              </select>
-              <span class="focus-input100"></span>
-              <span class="symbol-input100">
-                <span class="lnr lnr-book"></span>
-              </span>
-            </div>
-
-            <div class="wrap-input100 validate-input m-b-16" data-validate="Хүйсээ хийнэ үү?">
-              <select class="input100" name="sex">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-              <span class="focus-input100"></span>
-              <span class="symbol-input100">
-                <span class="lnr lnr-users"></span>
-              </span>
-            </div>
-
-            <div class="wrap-input100 m-b-16">
-              <select class="input100" name="session_year">
-                {% for sessionyear in session_years %}
-                <option value="{{ sessionyear.id }}">{{ sessionyear.session_start_year }} - {{ sessionyear.session_end_year}}</option>
-                {% endfor %}
-              </select>
-              <span class="focus-input100"></span>
-              <span class="symbol-input100">
-                <span class="lnr lnr-calendar-full"></span>
-              </span>
-            </div>
-
-            <div class="wrap-input100 validate-input m-b-16" data-validate="Зургаа хийнэ үү?">
-              <input type="file" class="input100-img" placeholder="Image" name="profile_pic" id="inputGroupFile01" accept=".png,.jpg,.jpeg,">
-              <label class="input100-img-label" for="inputGroupFile01">Choose Image</label>
-              <span class="focus-input100"></span>
-              <span class="symbol-input100">
-                <span class="lnr lnr-picture"></span>
-              </span>
-            </div>
-            <p id="GFG_DOWN" style="color:#adadad; font-size: 17px; font-weight: bold;">
-            </p>
-
-          </div>
+                <div class="form-submit">
+                    <input type="submit" name="submit" id="submit" class="submit" value="submit" />
+                </div>
+            </form>
         </div>
 
-        <div class="container-login100-form-btn p-t-25">
-          <button type="submit" onclick="GFG_Fun()" class="login100-form-btn">Register</button>
-        </div>
+    </div>
 
-        {% if messages %}
-        {% for message in messages %}
-        {% if message.tags == 'error' %}
-        <div class="alert alert_error mt-4" style="width: 100%;">
-          <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
-          <strong>{{ message }}</strong>
-        </div>
-        {% endif %}
-        {% if message.tags == 'success' %}
-        <div class="alert alert_success mt-4" style="width: 100%;">
-          <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
-          <strong>{{ message }}</strong>
-        </div>
-        {% endif %}
-        {% endfor %}
-        {% endif %}
-
-        <div class="text-center w-full p-t-35"></di-->
-      </form>
-
+    <!-- JS -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

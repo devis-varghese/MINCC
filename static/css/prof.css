@@ -1,0 +1,87 @@
+
+    .container1{
+                                                   display: block;
+                                                   height: 40px;
+                                                   overflow: hidden;
+                                                   width: 100px;
+                                               background: rgba(236, 232, 232, 0.879);
+                                               font-size:23px; 
+                                              
+                                               
+                                               
+                                           }
+
+                                           .container1:hover{
+                                           overflow:visible;
+                                               height: 420px;
+                                               width: 200px;
+                                               background: rgba(23, 22, 22, 0.879);
+                                           }
+
+                                           .main ul li{
+                                               display:none;
+                                           }
+
+                                           .container2{
+   height:76vh;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+
+.card1{
+   width:350px;
+   height:410px;
+   background-color:#fff;
+   box-shadow:0px 15px 30px rgba(0,0,0,0.1);
+   border-radius:10px;
+   overflow:hidden;
+   position:absolute;
+   top:110px
+}
+
+.card1 .info1{
+   padding:15px;
+   display:flex;
+   justify-content:space-between;
+   border-bottom:1px solid #e1dede;
+   background-color:#e5e5e5
+}
+
+.card1 .info1 .button1{
+   height:30px;
+   width:80px;
+   border:none;
+   color:#fff;
+   border-radius:4px;
+   background-color:#000;
+   cursor:pointer;
+   text-transform:uppercase
+}
+
+.card1 .forms1{
+   padding:15px;
+   
+}
+
+.card1 .inputs1{
+   display:flex;
+   flex-direction:column;
+   margin-bottom:10px;
+}
+
+.card1 .inputs1 .span1{
+   font-size:12px
+}
+
+.card1.inputs1 .input1{
+   height:40px;
+   padding:0px 10px;
+   font-size:17px;
+   box-shadow:none;
+   outline:none;
+}
+
+.card1 .inputs1 input1[type="text"][readonly]{
+   border: 2px solid rgba(0,0,0,0)}
+                                     
